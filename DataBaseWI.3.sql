@@ -142,7 +142,7 @@ CREATE TABLE amigos(
 		FOREIGN KEY(idUsuario1) REFERENCES usuario(idUsuario),
 	CONSTRAINT fk_amigos_Usuario2
 		FOREIGN KEY(idUsuario2) REFERENCES usuario(idUsuario)
-)
+);
 CREATE TABLE usuarioMaestria(
     idUsuario INT NOT NULL,
     idTema INT NOT NULL,
