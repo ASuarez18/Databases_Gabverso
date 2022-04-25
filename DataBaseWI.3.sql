@@ -67,6 +67,11 @@ CREATE TABLE gremio(
     descripcionG TEXT,
     PRIMARY KEY(idGremio)
 );
+CREATE TABLE rol(
+  idRol INT NOT NULL AUTO_INCREMENT,
+  rol VARCHAR(20),
+  PRIMARY KEY(idRol)
+);
 CREATE TABLE usuario(
 	idUsuario INT NOT NULL AUTO_INCREMENT,
   idEstadistica INT,
@@ -74,16 +79,18 @@ CREATE TABLE usuario(
   userName VARCHAR(55),
   correo VARCHAR (45),
   contrasenia VARCHAR (15),
-  rol VARCHAR (15),
+  rol INT,
   edad INT,
-  skin VARCHAR(45),
+  skin INT,
   nivel INT,
   experiencia INT,
   CONSTRAINT fk_Usuario_Estadistica1
     FOREIGN KEY(idEstadistica) REFERENCES estadistica(idEstadistica),
 	CONSTRAINT fk_Usuario_Gremio1
 		FOREIGN KEY(idGremio) REFERENCES gremio(idGremio),
-  PRIMARY KEY(idUsuario)
+  CONSTRAINT fk_Usuario_Roles1
+    FOREIGN KEY(rol) REFERENCES Roles(idRol),
+	PRIMARY KEY(idUsuario)
 );
 CREATE TABLE logro(
 	idLogro INT NOT NULL AUTO_INCREMENT,
