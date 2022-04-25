@@ -6,19 +6,25 @@ USE WisdomIsland;
 
 -- Tablas normales
 CREATE TABLE dificultad(
-	idDif INT NOT NULL AUTO_INCREMENT,
+	  idDif INT NOT NULL AUTO_INCREMENT,
     dif VARCHAR(20),
     PRIMARY KEY (idDif)
 );
 CREATE TABLE subTema(
     idSubTema INT NOT NULL AUTO_INCREMENT,
+    tema INT,
     subTema VARCHAR(30),
+    CONSTRAINT fk_Subtema_Tema
+		FOREIGN KEY(tema) REFERENCES tema(idTema),
     PRIMARY KEY (idSubTema)
 );
 CREATE TABLE categoria(
-	idCat INT NOT NULL AUTO_INCREMENT,
+	  idCat INT NOT NULL AUTO_INCREMENT,
+    subTema INT,
     cat VARCHAR(50),
-	PRIMARY KEY (idCat)
+    CONSTRAINT fk_Categoria_SubTema
+		FOREIGN KEY(subTema) REFERENCES subTema(idSubTema),
+	  PRIMARY KEY (idCat)
 );
 CREATE TABLE tema(
     idTema INT NOT NULL AUTO_INCREMENT,
@@ -33,17 +39,11 @@ CREATE TABLE pregunta(
     respuesta2 VARCHAR(255),
     respuesta3 VARCHAR(255),
     dificultad INT,
-    tema INT,
-    subTema INT,
     categoria INT,
     PRIMARY KEY (idPregunta),
     CONSTRAINT fk_Pregunta_Dificultad
 		FOREIGN KEY(dificultad) REFERENCES dificultad(idDif),
-    CONSTRAINT fk_Pregunta_Tema
-		FOREIGN KEY(tema) REFERENCES tema(idTema),
-    CONSTRAINT fk_Pregunta_SubTema
-		FOREIGN KEY(subTema) REFERENCES subTema(idSubTema),
-	CONSTRAINT fk_Pregunta_Categoria
+	  CONSTRAINT fk_Pregunta_Categoria
 		FOREIGN KEY(categoria) REFERENCES categoria(idCat)
 );
 CREATE TABLE estadistica(
@@ -69,21 +69,21 @@ CREATE TABLE gremio(
 );
 CREATE TABLE usuario(
 	idUsuario INT NOT NULL AUTO_INCREMENT,
-    idEstadistica INT,
-    idGremio INT,
-    userName VARCHAR(55),
-    correo VARCHAR (45),
-    contrasenia VARCHAR (15),
-    rol VARCHAR (15),
-    edad INT,
-    skin VARCHAR(45),
-    nivel INT,
-    experiencia INT,
-    CONSTRAINT fk_Usuario_Estadistica1
-		FOREIGN KEY(idEstadistica) REFERENCES estadistica(idEstadistica),
+  idEstadistica INT,
+  idGremio INT,
+  userName VARCHAR(55),
+  correo VARCHAR (45),
+  contrasenia VARCHAR (15),
+  rol VARCHAR (15),
+  edad INT,
+  skin VARCHAR(45),
+  nivel INT,
+  experiencia INT,
+  CONSTRAINT fk_Usuario_Estadistica1
+    FOREIGN KEY(idEstadistica) REFERENCES estadistica(idEstadistica),
 	CONSTRAINT fk_Usuario_Gremio1
 		FOREIGN KEY(idGremio) REFERENCES gremio(idGremio),
-    PRIMARY KEY(idUsuario)
+  PRIMARY KEY(idUsuario)
 );
 CREATE TABLE logro(
 	idLogro INT NOT NULL AUTO_INCREMENT,
