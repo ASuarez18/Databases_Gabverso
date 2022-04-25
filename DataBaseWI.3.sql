@@ -47,7 +47,7 @@ CREATE TABLE pregunta(
 		FOREIGN KEY(categoria) REFERENCES categoria(idCat)
 );
 CREATE TABLE estadistica(
-	idEstadistica INT NOT NULL AUTO_INCREMENT,
+	  idEstadistica INT NOT NULL AUTO_INCREMENT,
     puntos INT,
     horasJuego FLOAT,
     wins INT,
@@ -74,7 +74,6 @@ CREATE TABLE rol(
 );
 CREATE TABLE usuario(
 	idUsuario INT NOT NULL AUTO_INCREMENT,
-  idEstadistica INT,
   idGremio INT,
   userName VARCHAR(55),
   correo VARCHAR (45),
@@ -84,9 +83,7 @@ CREATE TABLE usuario(
   skin INT,
   nivel INT,
   experiencia INT,
-  CONSTRAINT fk_Usuario_Estadistica1
-    FOREIGN KEY(idEstadistica) REFERENCES estadistica(idEstadistica),
-	CONSTRAINT fk_Usuario_Gremio1
+  CONSTRAINT fk_Usuario_Gremio1
 		FOREIGN KEY(idGremio) REFERENCES gremio(idGremio),
   CONSTRAINT fk_Usuario_Roles1
     FOREIGN KEY(rol) REFERENCES Roles(idRol),
