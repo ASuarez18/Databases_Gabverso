@@ -238,7 +238,13 @@ VALUES
 ("Si se disuelven 50g de sal en un cuarto de litro, ¿cuál es la concentración de la mezcla?","16.6%","20%","83.3%","80%",4,7),
 ("Si se disuelven 5 gramos de sal con agua en una disolución de 20g, ¿cuál es la concentración de la mezcla?","25%","20%","75%","80%",4,7),
 
+INSERT INTO(idEstadistica, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
+VALUES
+(1,0,0,100,0,100,100,20,10);
 
+INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia)
+VALUES
+(1,0,"Roy","a01424454@tec.mx","123",3,19,1,10,0);
 
 INSERT INTO gremio(idGremio,logo,nombreGremio,elemento,nIntegrantes,descripcionG)
 VALUES
