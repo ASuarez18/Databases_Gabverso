@@ -77,12 +77,16 @@ CREATE TABLE usuario(
   idGremio INT,
   userName VARCHAR(55),
   correo VARCHAR (45),
-  contrasenia VARCHAR (15),
+  contrasenia VARCHAR (56),
   rol INT,
   edad INT,
   skin INT,
   nivel INT,
   experiencia INT,
+  CONSTRAINT userName_u
+    UNIQUE(userName),
+  CONSTRAINT correo_u
+    UNIQUE(correo),
   CONSTRAINT fk_Usuario_Gremio1
 		FOREIGN KEY(idGremio) REFERENCES gremio(idGremio),
   CONSTRAINT fk_Usuario_Roles1
