@@ -49,17 +49,17 @@ CREATE TABLE pregunta(
 CREATE TABLE estadistica(
 	  idEstadistica INT NOT NULL AUTO_INCREMENT,
     puntos INT,
-    horasJuego FLOAT,
+    horasJuego INT,
     wins INT,
     loses INT,
-    vida FLOAT,
-    mana FLOAT,
-    dano FLOAT,
-    defensa FLOAT,
+    vida INT,
+    mana INT,
+    dano INT,
+    defensa INT,
     PRIMARY KEY(idEstadistica)
 );
 CREATE TABLE gremio(
-	idGremio INT NOT NULL AUTO_INCREMENT,
+	  idGremio INT NOT NULL AUTO_INCREMENT,
     logo VARCHAR(45),
     nombreGremio VARCHAR(30),
     elemento VARCHAR(30),
@@ -106,9 +106,9 @@ CREATE TABLE emote(
     PRIMARY KEY(idEmote)
 );
 CREATE TABLE NPCs(
-	idNPC INT NOT NULL AUTO_INCREMENT,
+	  idNPC INT NOT NULL AUTO_INCREMENT,
     idGremio INT,
-    skin VARCHAR(45),
+    skin INT),
     nombreNPC VARCHAR(30),
     sexo VARCHAR(2),
     historia TEXT,
@@ -117,7 +117,7 @@ CREATE TABLE NPCs(
     PRIMARY KEY(idNPC)
 );
 CREATE TABLE mision(
-	idMision INT NOT NULL AUTO_INCREMENT,
+  	idMision INT NOT NULL AUTO_INCREMENT,
     idNPC INT,
     objetivo VARCHAR(45),
     nParticipantes INT,
@@ -128,15 +128,15 @@ CREATE TABLE mision(
     PRIMARY KEY(idMision)
 );
 CREATE TABLE poder(
-	idPoder INT NOT NULL AUTO_INCREMENT,
+	  idPoder INT NOT NULL AUTO_INCREMENT,
     tipo VARCHAR(20),
     elemento VARCHAR(20),
-    costoMana FLOAT,
-    danio FLOAT,
+    costoMana INT,
+    danio INT,
     PRIMARY KEY(idPoder)
 );
 CREATE TABLE item(
-	idItem INT NOT NULL AUTO_INCREMENT,
+	  idItem INT NOT NULL AUTO_INCREMENT,
     tipo VARCHAR(25),
     uso VARCHAR(25),
     PRIMARY KEY(idItem)
@@ -147,68 +147,68 @@ CREATE TABLE amigos(
     idUsuario1 INT NOT NULL,
     idUsuario2 INT NOT NULL,
     CONSTRAINT fk_amigos_Usuario1 
-		FOREIGN KEY(idUsuario1) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_amigos_Usuario2
-		FOREIGN KEY(idUsuario2) REFERENCES usuario(idUsuario)
+		  FOREIGN KEY(idUsuario1) REFERENCES usuario(idUsuario),
+	  CONSTRAINT fk_amigos_Usuario2
+		  FOREIGN KEY(idUsuario2) REFERENCES usuario(idUsuario)
 );
 CREATE TABLE usuarioMaestria(
     idUsuario INT NOT NULL,
     idTema INT NOT NULL,
     nivel INT,
-	CONSTRAINT fk_usuarioMaestria_Usuario1 
-		FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_usuarioMaestria_Tema1
-		FOREIGN KEY(idTema) REFERENCES tema(idTema)
+	  CONSTRAINT fk_usuarioMaestria_Usuario1 
+		  FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
+	  CONSTRAINT fk_usuarioMaestria_Tema1
+		  FOREIGN KEY(idTema) REFERENCES tema(idTema)
 );
 CREATE TABLE moduloWeb(
-	idUsuario INT NOT NULL,
+	  idUsuario INT NOT NULL,
     idPregunta INT NOT NULL,
     estadoActivo BOOL,
     CONSTRAINT fk_ModuloWeb_Usuario1 
-		FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_ModuloWeb_Pregunta1
-		FOREIGN KEY(idPregunta) REFERENCES pregunta(idPregunta)
+		  FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
+	  CONSTRAINT fk_ModuloWeb_Pregunta1
+		  FOREIGN KEY(idPregunta) REFERENCES pregunta(idPregunta)
 );
 CREATE TABLE usuarioEmote(
-	idUsuario INT NOT NULL,
+  	idUsuario INT NOT NULL,
     idEmote INT NOT NULL,
     CONSTRAINT fk_emoteUsuario_Usuario1 
-		FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_emoteUsuario_Emote1
-		FOREIGN KEY(idEmote) REFERENCES emote(idEmote)
+		  FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
+    CONSTRAINT fk_emoteUsuario_Emote1
+      FOREIGN KEY(idEmote) REFERENCES emote(idEmote)
 );
 CREATE TABLE usuarioMision(
-	idUsuario INT NOT NULL,
+	  idUsuario INT NOT NULL,
     idMision INT NOT NULL,
     tiempo INT,
     CONSTRAINT fk_usuarioMision_Usuario1 
-		FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_PersonajeMision_Mision1
-		FOREIGN KEY(idMision) REFERENCES mision(idMision)
+      FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
+    CONSTRAINT fk_PersonajeMision_Mision1
+      FOREIGN KEY(idMision) REFERENCES mision(idMision)
 );
 CREATE TABLE usuarioLogro(
-	idUsuario INT NOT NULL,
+    idUsuario INT NOT NULL,
     idLogro INT NOT NULL,
     fecha DATE,
     CONSTRAINT fk_UsuarioLogro_Usuario1 
-		FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_UsuarioLogro_Logros1
-		FOREIGN KEY(idLogro) REFERENCES logro(idLogro)
+      FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
+    CONSTRAINT fk_UsuarioLogro_Logros1
+      FOREIGN KEY(idLogro) REFERENCES logro(idLogro)
 );
 CREATE TABLE usuarioPoder(
-	idUsuario INT NOT NULL,
+    idUsuario INT NOT NULL,
     idPoder INT NOT NULL,
     CONSTRAINT fk_usuarioPoder_Usuario1 
-		FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_usuarioPoder_Poderes1
-		FOREIGN KEY(idPoder) REFERENCES poder(idPoder)
+      FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
+    CONSTRAINT fk_usuarioPoder_Poderes1
+      FOREIGN KEY(idPoder) REFERENCES poder(idPoder)
 );
 CREATE TABLE usuarioItem(
-	idUsuario INT NOT NULL,
+  	idUsuario INT NOT NULL,
     idItem INT NOT NULL,
     cantidad INT,
     CONSTRAINT fk_usuarioItem_Usuario1 
-		FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
-	CONSTRAINT fk_usuarioItem_Poderes1
-		FOREIGN KEY(idItem) REFERENCES item(idItem)
+      FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario),
+    CONSTRAINT fk_usuarioItem_Poderes1
+      FOREIGN KEY(idItem) REFERENCES item(idItem)
 );
