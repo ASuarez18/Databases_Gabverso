@@ -226,17 +226,17 @@ VALUES
 ("¿Qué significa que la concentración de una mezcla esté al 50%?","Que la cantidad de soluto es la mitad de la disolución","Que la cantidad de soluto es la mitad del solvente","Que la cantidad máxima de disolución está a la mitad","Que el solvente soporta el doble de soluto del que tiene",3,7),
 ("¿Qué metodos se deben aplicar para separar compuestos de una mezcla?","Métodos físicos","Métodos químicos","Métodos inversos","Métodos de equilibrio",3,7),
 ("¿Qué metodos se deben aplicar para separar elementos y compuestos de una sustancia que no es una mezcla?","Métodos químicos","Métodos físicos","Métodos inversos","Métodos de equilibrio",3,7),
-("¿En qué consiste la decantación?","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","","","",4,7),
-("¿En qué consiste el método de filtración?","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","","","",4,7),
-("¿En qué consiste la separación magnética?","Para separar fases por su potencial magnético","","","",4,7),
-("¿En qué consiste el tamizado?","Para separar compuestos sólidos de diferente tamaño aplicando un filtro","","","",4,7),
-("¿En qué consiste la destilación?","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos paraevaporar algún compuesto","","","",4,7),
-("¿En qué consiste la cristalización?","Para separar sólidos disueltos en líquidos calentando la mezcla y evaporando el líquido","","","",4,7),
-("¿En qué consiste la flotación?","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","","","",4,7),
-("¿En qué consiste la cromatografía?","Para separar mezclas utilizando la capilar de acuerdo a la afinidad de los componentes de la mezcla por ambas fases","","","",4,7),
+("¿En qué consiste la decantación?","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar fases por su potencial magnético","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos parae vaporar algún compuesto",4,7),
+("¿En qué consiste el método de filtración?","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar compuestos sólidos de diferente tamaño aplicando un filtro","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos parae vaporar algún compuesto",4,7),
+("¿En qué consiste la separación magnética?","Para separar fases por su potencial magnético","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar compuestos sólidos de diferente tamaño aplicando un filtro",4,7),
+("¿En qué consiste el tamizado?","Para separar compuestos sólidos de diferente tamaño aplicando un filtro","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar sólidos disueltos en líquidos calentando la mezcla y evaporando el líquido",4,7),
+("¿En qué consiste la destilación?","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos parae vaporar algún compuesto","Para separar sólidos disueltos en líquidos calentando la mezcla y evaporando el líquido","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar fases por su potencial magnético",4,7),
+("¿En qué consiste la cristalización?","Para separar sólidos disueltos en líquidos calentando la mezcla y evaporando el líquido","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos para evaporar algún compuesto","Para separar mezclas utilizando la capilar de acuerdo a la afinidad de los componentes de la mezcla por ambas fases",4,7),
+("¿En qué consiste la flotación?","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos parae vaporar algún compuesto",4,7),
+("¿En qué consiste la cromatografía?","Para separar mezclas utilizando la capilar de acuerdo a la afinidad de los componentes de la mezcla por ambas fases","Para separar fases por su potencial magnético","Para separar sólidos disueltos en líquidos calentando la mezcla y evaporando el líquido","Para separar compuestos sólidos de diferente tamaño aplicando un filtro",4,7),
 ("El suero es una mezcla de agua con sal (cloruro de sodio) al 0.9%. 2 litros de suero ocuparían ... de sal","18 gramos","1.8 gramos","1.8 kilogramos","0.18 kilogramos",4,7),
 ("Si se disuelven 50g de sal en un cuarto de litro, ¿cuál es la concentración de la mezcla?","16.6%","20%","83.3%","80%",4,7),
-("Si se disuelven 5 gramos de sal con agua en una disolución de 20g, ¿cuál es la concentración de la mezcla?","25%","20%","75%","80%",4,7),
+("Si se disuelven 5 gramos de sal con agua en una disolución de 20g, ¿cuál es la concentración de la mezcla?","25%","20%","75%","80%",4,7);
 
 INSERT INTO(idEstadistica, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
 VALUES
@@ -244,7 +244,7 @@ VALUES
 
 INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia)
 VALUES
-(1,0,"Roy","a01424454@tec.mx","123",3,19,1,10,0);
+(1,0,"Roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0);
 
 INSERT INTO gremio(idGremio,logo,nombreGremio,elemento,nIntegrantes,descripcionG)
 VALUES
