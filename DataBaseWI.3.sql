@@ -10,6 +10,11 @@ CREATE TABLE dificultad(
     dif VARCHAR(20),
     PRIMARY KEY (idDif)
 );
+CREATE TABLE tema(
+    idTema INT NOT NULL AUTO_INCREMENT,
+    tema VARCHAR(40),
+    PRIMARY KEY (idTema)
+);
 CREATE TABLE subTema(
     idSubTema INT NOT NULL AUTO_INCREMENT,
     tema INT,
@@ -25,11 +30,6 @@ CREATE TABLE categoria(
     CONSTRAINT fk_Categoria_SubTema
 		FOREIGN KEY(subTema) REFERENCES subTema(idSubTema),
 	  PRIMARY KEY (idCat)
-);
-CREATE TABLE tema(
-    idTema INT NOT NULL AUTO_INCREMENT,
-    tema VARCHAR(40),
-    PRIMARY KEY (idTema)
 );
 CREATE TABLE pregunta(
 	idPregunta INT NOT NULL AUTO_INCREMENT,
@@ -90,7 +90,7 @@ CREATE TABLE usuario(
   CONSTRAINT fk_Usuario_Gremio1
 		FOREIGN KEY(idGremio) REFERENCES gremio(idGremio),
   CONSTRAINT fk_Usuario_Roles1
-    FOREIGN KEY(rol) REFERENCES Roles(idRol),
+    FOREIGN KEY(rol) REFERENCES rol(idRol),
 	PRIMARY KEY(idUsuario)
 );
 CREATE TABLE logro(
@@ -101,14 +101,14 @@ CREATE TABLE logro(
 );
 CREATE TABLE emote(
 	idEmote INT NOT NULL AUTO_INCREMENT,
-    imagen VARCHAR(45), -- MEDIUMBLOB
+    imagen VARCHAR(45), 
     nombreEmote VARCHAR(30),
     PRIMARY KEY(idEmote)
 );
 CREATE TABLE NPCs(
 	  idNPC INT NOT NULL AUTO_INCREMENT,
     idGremio INT,
-    skin INT),
+    skin INT,
     nombreNPC VARCHAR(30),
     sexo VARCHAR(2),
     historia TEXT,

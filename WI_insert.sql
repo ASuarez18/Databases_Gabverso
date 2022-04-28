@@ -9,36 +9,6 @@ VALUES
 (5,"Experto"),
 (6,"Master");
 
-INSERT INTO subTema(idSubTema, subTema)
-VALUES
-(1,1,"Países y capitales"),
-(2,4,"Fuerzas"),
-(3,5,"Procesos"),
-(4,3,"México"),
-(5,6,"Materiales y mezclas"),
-(6,2,"Análisis de datos"),
-(7,,""),
-(8,,""),
-(9,,""),
-(10,,"");
-
-
-INSERT INTO categoria(idCategoria, cat)
-VALUES
-(1,1,"México"),
-(2,1,"Europa"),
-(3,1,"Norte y Sudamérica"),
-(4,2,"Leyes de Newton"),
-(5,3,"Obtención de energía"),
-(6,4,"Presidentes"),
-(7,5,"Mezclas"),
-(8,6,"Estadística"),
-(9,,""),
-(10,,""),
-(11,,""),
-(12,,"");
-
-
 INSERT INTO tema(idTema, tema)
 VALUES
 (1,"Geografía"),
@@ -51,6 +21,26 @@ VALUES
 (8,"Artes"),
 (9,"Formación cívica y ética"),
 (10,"Tecnología");
+
+INSERT INTO subTema(idSubTema, subTema)
+VALUES
+(1,1,"Países y capitales"),
+(2,4,"Fuerzas"),
+(3,5,"Procesos"),
+(4,3,"México"),
+(5,6,"Materiales y mezclas"),
+(6,2,"Análisis de datos");
+
+INSERT INTO categoria(idCat, subTema, cat)
+VALUES
+(1,1,"México"),
+(2,1,"Europa"),
+(3,1,"Norte y Sudamérica"),
+(4,2,"Leyes de Newton"),
+(5,3,"Obtención de energía"),
+(6,4,"Presidentes"),
+(7,5,"Mezclas"),
+(8,6,"Estadística");
 
 INSERT INTO pregunta(pregunta,respuesta,respuesta1,respuesta2,respuesta3,dificultad,categoria)
 VALUES
@@ -238,13 +228,9 @@ VALUES
 ("Si se disuelven 50g de sal en un cuarto de litro, ¿cuál es la concentración de la mezcla?","16.6%","20%","83.3%","80%",4,7),
 ("Si se disuelven 5 gramos de sal con agua en una disolución de 20g, ¿cuál es la concentración de la mezcla?","25%","20%","75%","80%",4,7);
 
-INSERT INTO(idEstadistica, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
+INSERT INTO estadistica(idEstadistica, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
 VALUES
 (1,0,0,100,0,100,100,20,10);
-
-INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia)
-VALUES
-(1,0,"Roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0);
 
 INSERT INTO gremio(idGremio,logo,nombreGremio,elemento,nIntegrantes,descripcionG)
 VALUES
@@ -255,6 +241,12 @@ VALUES
 (5,"Hola","Tigres","Fantasma",0,"Gremio"),
 (6,"Hola","Sin gremio","Libre",0,"Sin gremio");
 
-INSERT INTO logro(idLogro,nombreLogro,descripcion)
+INSERT INTO rol(idRol, rol)
 VALUES
+(1,"Estudiante"),
+(2,"Maestro"),
+(3,"Administrador");
 
+INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia)
+VALUES
+(1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0);
