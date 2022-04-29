@@ -217,7 +217,7 @@ VALUES
 ("¿Qué metodos se deben aplicar para separar compuestos de una mezcla?","Métodos físicos","Métodos químicos","Métodos inversos","Métodos de equilibrio",3,7),
 ("¿Qué metodos se deben aplicar para separar elementos y compuestos de una sustancia que no es una mezcla?","Métodos químicos","Métodos físicos","Métodos inversos","Métodos de equilibrio",3,7),
 ("¿En qué consiste la decantación?","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar fases por su potencial magnético","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos parae vaporar algún compuesto",4,7),
-("¿En qué consiste el método de filtración?","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar compuestos sólidos de diferente tamaño aplicando un filtro","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos parae vaporar algún compuesto",4,7),
+("¿En qué consiste el método de filtración?","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar compuestos sólidos de diferente tamaño aplicando un filtro","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie",4,7),
 ("¿En qué consiste la separación magnética?","Para separar fases por su potencial magnético","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar compuestos sólidos de diferente tamaño aplicando un filtro",4,7),
 ("¿En qué consiste el tamizado?","Para separar compuestos sólidos de diferente tamaño aplicando un filtro","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos floten en la superficie","Para separar compuestos insolubles (líquidos con sólidos) aplicando un filtro poroso que retiene los compuestos por el tamaño de las partículas","Para separar sólidos disueltos en líquidos calentando la mezcla y evaporando el líquido",4,7),
 ("¿En qué consiste la destilación?","Para separar líquidos solubles pero con distinto punto de ebullición calentándolos parae vaporar algún compuesto","Para separar sólidos disueltos en líquidos calentando la mezcla y evaporando el líquido","Para separar componentes sólidos de líquidos insolubles dejando reposar la mezcla para que los sólidos reposen en el fondo","Para separar fases por su potencial magnético",4,7),
@@ -230,7 +230,9 @@ VALUES
 
 INSERT INTO estadistica(idEstadistica, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
 VALUES
-(1,0,0,100,0,100,100,20,10);
+(1,0,0,100,0,100,100,20,10),
+(1,0,0,0,0,100,100,20,10),
+(1,0,0,0,0,100,100,20,10);
 
 INSERT INTO gremio(idGremio,logo,nombreGremio,elemento,nIntegrantes,descripcionG)
 VALUES
@@ -249,4 +251,6 @@ VALUES
 
 INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia)
 VALUES
-(1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0);
+(1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0),
+(2,6,"gab","a01423225@tec.mx",SHA2("123",224),3,19,1,10,0),
+(3,6,"alex","a01424529@tec.mx",SHA2("123",224),3,19,1,10,0);
