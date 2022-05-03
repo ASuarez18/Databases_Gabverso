@@ -228,12 +228,6 @@ VALUES
 ("Si se disuelven 50g de sal en un cuarto de litro, ¿cuál es la concentración de la mezcla?","16.6%","20%","83.3%","80%",4,7),
 ("Si se disuelven 5 gramos de sal con agua en una disolución de 20g, ¿cuál es la concentración de la mezcla?","25%","20%","75%","80%",4,7);
 
-INSERT INTO estadistica(idEstadistica, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
-VALUES
-(1,0,0,100,0,100,100,20,10),
-(1,0,0,0,0,100,100,20,10),
-(1,0,0,0,0,100,100,20,10);
-
 INSERT INTO gremio(idGremio,logo,nombreGremio,elemento,nIntegrantes,descripcionG)
 VALUES
 (1,"Hola","Osos","Tierra",0,"Gremio"),
@@ -249,8 +243,6 @@ VALUES
 (2,"Maestro"),
 (3,"Administrador");
 
-INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia)
+INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
 VALUES
-(1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0),
-(2,6,"gab","a01423225@tec.mx",SHA2("123",224),3,19,1,10,0),
-(3,6,"alex","a01424529@tec.mx",SHA2("123",224),3,19,1,10,0);
+(1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0,0,0,100,0,100,100,20,10)

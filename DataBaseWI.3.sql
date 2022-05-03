@@ -46,18 +46,6 @@ CREATE TABLE pregunta(
 	  CONSTRAINT fk_Pregunta_Categoria
 		FOREIGN KEY(categoria) REFERENCES categoria(idCat)
 );
-CREATE TABLE estadistica(
-	  idEstadistica INT NOT NULL AUTO_INCREMENT,
-    puntos INT,
-    horasJuego INT,
-    wins INT,
-    loses INT,
-    vida INT,
-    mana INT,
-    dano INT,
-    defensa INT,
-    PRIMARY KEY(idEstadistica)
-);
 CREATE TABLE gremio(
 	  idGremio INT NOT NULL AUTO_INCREMENT,
     logo VARCHAR(45),
@@ -83,6 +71,14 @@ CREATE TABLE usuario(
   skin INT,
   nivel INT,
   experiencia INT,
+  puntos INT,
+  horasJuego INT,
+  wins INT,
+  loses INT,
+  vida INT,
+  mana INT,
+  dano INT,
+  defensa INT,
   CONSTRAINT userName_u
     UNIQUE(userName),
   CONSTRAINT correo_u
