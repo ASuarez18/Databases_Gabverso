@@ -243,6 +243,20 @@ VALUES
 (2,"Maestro"),
 (3,"Administrador");
 
+INSERT INTO logro(nombreLogro, descripcion) 
+VALUES
+('Hola ahí', 'Hablaste con un NPC'),
+('Uno para todos...', 'Te has unido a un gremio'),
+('Muevelo nene', 'Has seleccionado tu primer baile'),
+('¿Me estás retando?', 'Has empezado tu primer combate'),
+('Genio', 'Lograste completar un combate'),
+('A entrenar', 'Estuviste en modo entrenamiento'),
+('Estás que ardes', 'Has conseguido 3 victorias'),
+('Nuevos retos', 'Has subido de nivel'),
+('Una nueva amistad', 'Has agregado a un nuevo amigo'),
+('¿Amigo o enemigo?', 'Has desafiado a un amigo'),
+('Nuevo Comienzo', 'Primera vez jugando Wisdom Island');
+
 INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
 VALUES
 (1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0,0,0,100,0,100,100,20,10)
