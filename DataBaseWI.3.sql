@@ -1,4 +1,4 @@
-DROP DATABASE WisdomIsland;
+-- DROP DATABASE WisdomIsland;
 
 CREATE DATABASE WisdomIsland;
 
@@ -139,6 +139,15 @@ CREATE TABLE item(
 );
 
 -- Tablas puente
+CREATE TABLE mensaje(
+	idRemitente INT NOT NULL,
+    idDestinatario INT NOT NULL,
+    contenido VARCHAR(255),
+    CONSTRAINT fk_mensaje_Remitente
+		  FOREIGN KEY(idRemitente) REFERENCES usuario(idUsuario),
+	  CONSTRAINT fk_mensaje_Destinatario
+		  FOREIGN KEY(idDestinatario) REFERENCES usuario(idUsuario)
+);
 CREATE TABLE amigos(
     idUsuario1 INT NOT NULL,
     idUsuario2 INT NOT NULL,
@@ -147,6 +156,7 @@ CREATE TABLE amigos(
 	  CONSTRAINT fk_amigos_Usuario2
 		  FOREIGN KEY(idUsuario2) REFERENCES usuario(idUsuario)
 );
+
 CREATE TABLE usuarioMaestria(
     idUsuario INT NOT NULL,
     idTema INT NOT NULL,
@@ -208,3 +218,4 @@ CREATE TABLE usuarioItem(
     CONSTRAINT fk_usuarioItem_Poderes1
       FOREIGN KEY(idItem) REFERENCES item(idItem)
 );
+

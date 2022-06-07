@@ -22,7 +22,7 @@ VALUES
 (9,"Formación cívica y ética"),
 (10,"Tecnología");
 
-INSERT INTO subTema(idSubTema, subTema)
+INSERT INTO subTema(idSubTema, tema, subTema)
 VALUES
 (1,1,"Países y capitales"),
 (2,4,"Fuerzas"),
@@ -259,4 +259,6 @@ VALUES
 
 INSERT INTO usuario(idUsuario, idGremio, userName, correo, contrasenia, rol, edad, skin, nivel, experiencia, puntos, horasJuego, wins, loses, vida, mana, dano, defensa)
 VALUES
-(1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0,0,0,100,0,100,100,20,10)
+(1,6,"roy","a01424454@tec.mx",SHA2("123",224),3,19,1,10,0,0,0,100,0,100,100,20,10);
+
+UPDATE usuario SET experiencia=12 WHERE idUsuario=1;
